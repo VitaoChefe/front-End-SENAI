@@ -7,6 +7,7 @@
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <title>Desafio</title>
 </head>
 <body>
@@ -40,12 +41,19 @@
 <div class="container">
     <div class="d-flex justify-content-between">
         <div class="d-flex flex-column justify-content-center align-items-center">
-            <h1>Bem-vindo ao Nosso Site de Motos</h1>
+            <h1 id="titulo" onmousedown="testTexto()" onmouseup="reset()" onmouseover="testColor()">Bem-vindo ao Nosso Site de Motos</h1>
             <p>Este é um exemplo básico sobre a nossa loja de motos, ela se encontra-se na cidade de Guararapes no
                 interior
                 de São paulo,
                 assim a loja oferece o melhor da região em equipamentos, lavagem de motos, montagem de motos, motos de
                 primeira linha e trocagem de oléos em geral.</p>
+            <form>
+                <label>
+                    label
+                    <input id="input" onmouseover="testInput()">
+                </label>
+            </form>
+
         </div>
         <div class="image float-end">
             <img src="imagem%20da%20tiger.jpg" style="object-fit: contain; margin: 10px;">
@@ -95,6 +103,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+<script src="exemplos.js"></script>
 
 
 </body>
