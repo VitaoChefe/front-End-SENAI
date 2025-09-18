@@ -1,3 +1,87 @@
-.meu-icone:hover {
-    color: firebrick;
+/* Reset básico e corpo */
+html, body {
+    height: 100%;
+    background-color: black;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Container que segura os cards */
+#list {
+    display: flex;
+    flex-wrap: wrap;       /* Permite quebra de linha */
+    gap: 16px;             /* Espaçamento entre cards */
+    justify-content: center;
+}
+
+/* Cada card simples */
+.card {
+    background: #cccccc;
+    color: #000000;
+    border-radius: 8px;
+    padding: 16px;
+    width: 300px;          /* Largura fixa para todos os cards */
+    box-sizing: border-box;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover suave */
+.card:hover {
+    background-color: deeppink;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Imagem do produto */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+/* Título */
+.card h2 {
+    font-size: 1.3rem;
+    margin: 0 0 8px 0;
+}
+
+/* Texto */
+.card p {
+    margin: 4px 0;
+}
+
+/* Spinner centralizado */
+#spinner {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Mensagem de erro */
+#error {
+    background-color: #ff4444;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 650px) {
+    #list {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;  /* cards ocupam toda largura da tela */
+        max-width: 400px;
+    }
 }
